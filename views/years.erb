@@ -1,3 +1,13 @@
 <h1>Years</h1>
 
 <!-- use the erb outputs of <%= %> and call 'inspect' on your object -->
+
+<p>
+	<%= @yearText[:content] %>
+</p>
+
+<ol>
+	<% @years.each do |y| %>
+  		<li><%= y %></li>
+	<% end %>
+</ol>

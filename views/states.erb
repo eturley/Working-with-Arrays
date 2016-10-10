@@ -1,3 +1,11 @@
 <h1>State List</h1>
 
 <!-- iterate through each state in the array and put them into list items individually using the index of the array item as the list items ID -->
+<p>
+	<%= @stateText[:content] %>
+</p>
+<ul>
+	<% @states.each do |st| %>
+		<li id=@states.find_index(st)><%= st %></li>
+	<% end %>
+</ul>
