@@ -10,9 +10,15 @@ end
 get '/years' do
 
   # code!
+
+  # jarp: 
+    # you can just set a simple variable for this
+    # @yearText ="I was born in April of 1996 and have been alive for 20 years."
+    # then in your view wrap it in <p> tags
   @yearText = {
   	:content => "<p>I was born in April of 1996 and have been alive for 20 years.</p>"
   }
+
   @years = (1996..2016).to_a
 
   erb :years, layout: :main

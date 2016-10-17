@@ -5,6 +5,21 @@
 	<%= @stateText[:content] %>
 </p>
 <ul>
+	<!-- jarp: I'd recommend using "state" as the placeholder. Going forward you want to be as clear as possible and have your code be readable -->
+
+	<!-- jarp: You forgot to wrap the @states.find_index(st) in output tags so its just repeating your code in the html -->
+
+	<!--
+	<li id=@states.find_index(st)>Arizona</li>
+	<li id=@states.find_index(st)>California</li>
+	<li id=@states.find_index(st)>Indiana</li>
+	<li id=@states.find_index(st)>New Jersey</li>
+	<li id=@states.find_index(st)>Oregon</li>
+	<li id=@states.find_index(st)>Washington</li>
+	-->
+
+	<!-- jarp: remember to always check the html by viewing the source in the browser -->
+
 	<% @states.each do |st| %>
 		<li id=@states.find_index(st)><%= st %></li>
 	<% end %>
